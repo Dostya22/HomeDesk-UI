@@ -3,10 +3,47 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HomeDesk_UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="HomeDesk - Sign Up" Height="480" Width="480" WindowStartupLocation="CenterScreen">
+    <Grid Background="#0F172A">
+        <Border CornerRadius="12" Padding="24" Background="#111827" Width="380" HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Create your account" Foreground="White" FontSize="20" FontWeight="SemiBold"
+                           Margin="0,0,0,16" />
 
+                <StackPanel Margin="0,4">
+                    <TextBlock Text="Name" Foreground="#CBD5E1" Margin="0,0,0,4" />
+                    <TextBox x:Name="NameText" Height="32" Padding="8" Background="#0B1220" Foreground="White"
+                             BorderBrush="#334155" />
+                </StackPanel>
+
+                <StackPanel Margin="0,8,0,4">
+                    <TextBlock Text="Email" Foreground="#CBD5E1" Margin="0,0,0,4" />
+                    <TextBox x:Name="EmailText" Height="32" Padding="8" Background="#0B1220" Foreground="White"
+                             BorderBrush="#334155" />
+                </StackPanel>
+
+                <StackPanel Margin="0,8,0,4">
+                    <TextBlock Text="Password" Foreground="#CBD5E1" Margin="0,0,0,4" />
+                    <PasswordBox x:Name="PasswordBox" Height="32" Padding="8" Background="#0B1220" Foreground="White"
+                                 BorderBrush="#334155" />
+                </StackPanel>
+
+                <StackPanel Margin="0,8,0,8">
+                    <TextBlock Text="Invite Code" Foreground="#CBD5E1" Margin="0,0,0,4" />
+                    <TextBox x:Name="InviteText" Height="32" Padding="8" Background="#0B1220" Foreground="White"
+                             BorderBrush="#334155" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,8,0,0">
+                    <Button x:Name="SignUpButton" Content="Sign Up" Width="100" Height="34" Background="#2563EB"
+                            Foreground="White" BorderBrush="#1D4ED8" Click="SignUpButton_OnClick" />
+                    <ProgressBar x:Name="Progress" Width="120" Height="8" Margin="12,0,0,0" Visibility="Collapsed" />
+                </StackPanel>
+
+                <TextBlock x:Name="StatusText" Text="" Foreground="#93C5FD" Margin="0,12,0,0" TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
